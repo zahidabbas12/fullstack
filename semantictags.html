@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Assignment</title>
+</head>
+
+<body>
+    <header>
+        <h1>HTML Semantic Tags, Links, Lists and Tables</h1>
+        <nav>
+            <a href="#lists">Lists</a>
+            <a href="#links">Links</a>
+            <a href="#table">Table</a>
+        </nav>
+    </header>
+    <main>
+
+        <section id="lists">
+            <h2>Lists</h2>
+
+            <article>
+                <h3>Unordered List</h3>
+                <ul>
+                    <li>Semantic elements
+                        <ul>
+                            <li>&lt;header&gt; &amp; &lt;footer&gt;</li>
+                            <li>&lt;nav&gt; &amp; &lt;main&gt;</li>
+                        </ul>
+                    </li>
+                    <li>Accessibility</li>
+                    <li>Readable structure</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Ordered List</h3>
+                <ol>
+                    <li>Plan structure</li>
+                    <li>Write semantic HTML</li>
+                    <li>Test for accessibility</li>
+                </ol>
+            </article>
+
+            <article>
+                <h3>Definition List</h3>
+                <dl>
+                    <dt>Semantic HTML</dt>
+                    <dd>Elements that describe their meaning to browsers and assistive tech.</dd>
+                    <dt>Accessible Links</dt>
+                    <dd>Links with descriptive text.</dd>
+                </dl>
+            </article>
+        </section>
+
+        <section id="links">
+            <h2>Links</h2>
+            <p>Internal link: jump to the <a href="#table">table section</a>.</p>
+            <p>External link example: <a href="basic.html" rel="noopener">Another HTML page</a>.</p>
+            <p>Contact link: <a href="mailto:example@example.com">example@example.com</a></p>
+            <p>Telephone link: <a href="tel:+923001234567">Call Us: +92 300 1234567</a></p>
+        </section>
+
+        <section id="table">
+            <h2>Table — Weekly Plan</h2>
+
+            <table border="1" cellpadding="10" cellspacing="0">
+                <caption>Full stack web development class schedule</caption>
+                
+                <thead>
+                    <tr>
+                        <th scope="col">Day</th>
+                        <th scope="col">Activity</th>
+                        <th scope="col">Duration</th>
+                        <th scope="col">Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Monday</th>
+                        <td>Lecture</td>
+                        <td>2 hours</td>
+                        <td>Focus on theory, Practice</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Tuesday</th>
+                        <td>Lecture</td>
+                        <td>2 hours</td>
+                        <td>Practice exercises</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Wednesday-Sunday</th>
+                        <td>Hands-on excercise</td>
+                        <td>3-4 hours</td>
+                        <td>Practice exercises, Assignment</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">Weekly Class Schedule</tr>
+                </tfoot>
+            </table>
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; 2025 Second Assignment — All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
