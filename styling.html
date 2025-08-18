@@ -1,12 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>CSS</title>
-</head>
-<body>
-    <h1>Using CSS</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutoHub Motors</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>AutoHub Motors</h1>
+      <nav>
+        <a href="#inventory">Inventory</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <div class="container">
+      <section id="inventory">
+        <h2>Our Featured Cars</h2>
+        <div class="product-grid">
+          <!-- Card 1 -->
+          <div class="card">
+            <img
+              src="https://silodrome.com/wp-content/uploads/2015/06/Ford-Shelby-Mustang-GT500-1.jpg"
+              alt="Shelby Mustang"
+            />
+            <div class="card-body">
+              <h3><a href="#">Shelby Mustang</a></h3>
+              <p class="summary">
+                A legendary American muscle car with raw power and classic
+                design.
+              </p>
+              <span class="price">$58,900</span>
+              <a href="#" class="btn">View Details</a>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="card">
+            <img
+              src="https://www.exoticcarhacks.com/wp-content/uploads/2024/10/ab912c9e1cbdd13c1d79be89bfd9eb60.jpg"
+              alt="BMW i8"
+            />
+            <div class="card-body">
+              <h3><a href="#">BMW i8</a></h3>
+              <p class="summary">
+                A futuristic hybrid sports car combining efficiency with
+                performance.
+              </p>
+              <span class="price">$74,500</span>
+              <a href="#" class="btn">View Details</a>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="card">
+            <img
+              src="https://www.indystar.com/gcdn/-mm-/c66621cbe705860920f426ce248762e1c4358d09/c=0-511-4986-3328/local/-/media/Indianapolis/None/2014/10/15/635489697692950024-RR-EVQ-13MY-290812-05.jpg?width=1320&height=746&fit=crop&format=pjpg&auto=webp"
+              alt="Range Rover Evoque"
+            />
+            <div class="card-body">
+              <h3><a href="#">Range Rover Evoque</a></h3>
+              <p class="summary">
+                Luxury compact SUV built for style, comfort, and off-road
+                capability.
+              </p>
+              <span class="price">$66,200</span>
+              <a href="#" class="btn">View Details</a>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="card">
+            <img
+              src="https://img.autocarindia.com/ExtraImages/20250221064150_Mercedes_Benz_E_class_front_static.jpg?w=700&c=1"
+              alt="Mercedes S-Class"
+            />
+            <div class="card-body">
+              <h3><a href="#">Mercedes S-Class</a></h3>
+              <p class="summary">
+                The flagship sedan offering cutting-edge tech and unmatched
+                luxury.
+              </p>
+              <span class="price">$95,000</span>
+              <a href="#" class="btn">View Details</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- About Section -->
+    <div class="container">
+      <section id="about" class="about">
+        <h2>About AutoHub</h2>
+        <h3>Your trusted partner in premium vehicles</h3>
+        <p>
+          At <b>AutoHub Motors</b>, we specialize in high-performance, luxury,
+          and reliable vehicles. From sleek sports cars to family SUVs, our
+          mission is to provide our customers with the best driving experience.
+        </p>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea rows="4" placeholder="Your Message"></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+    </div>
+    
+    <footer>
+      <p>&copy; 2025 AutoHub Motors. All Rights Reserved.</p>
+    </footer>
+  </body>
 </html>
