@@ -1,0 +1,197 @@
+<!--Simple Product listing Card -->
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-8 shadow-2xl">
+  <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 w-full max-w-sm mx-auto">
+    <!-- Product Image -->
+    <img 
+      src="https://images.unsplash.com/photo-1655628143563-a4b1c60de33d?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+      alt="Product Image" 
+      class="w-full h-64 object-cover" 
+    />
+    
+    <!-- Card Content -->
+    <div class="p-6">
+      <h2 class="text-xl font-bold text-gray-800">Wireless Headphones</h2>
+      <p class="text-gray-600 mt-2 text-sm leading-relaxed">
+        High-quality sound with noise cancellation for a premium music experience.
+      </p>
+
+      <!-- Price + Button -->
+      <div class="mt-6 flex items-center justify-between">
+        <span class="text-xl font-semibold text-blue-700">$89.99</span>
+        <button class="bg-blue-600 text-white px-5 py-2.5 rounded-lg hover:bg-blue-700 transition">
+          Buy Now
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--Advance Product Card -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-8">
+    <div x-data="{ open: false }"
+        class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 w-full max-w-sm mx-auto cursor-pointer"
+        @click="open = true">
+        <!-- Product Image -->
+        <img src="https://images.unsplash.com/photo-1655628143563-a4b1c60de33d?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0"
+            alt="Product Image" class="w-full h-64 object-cover" />
+
+        <!-- Card Content -->
+        <div class="p-6">
+            <h2 class="text-xl font-bold text-gray-800">Wireless Headphones</h2>
+            <p class="text-gray-600 mt-2 text-sm leading-relaxed">
+                High-quality sound with noise cancellation.
+            </p>
+
+            <!-- Review Stars -->
+            <div class="flex items-center mt-3 text-yellow-400">
+                ⭐⭐⭐⭐☆ <span class="ml-2 text-gray-500 text-sm">(120 reviews)</span>
+            </div>
+        </div>
+
+        <!-- Full Screen Modal -->
+        <div x-show="open" x-transition
+            class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
+            <div class="bg-white w-full h-full sm:w-3/4 sm:h-3/4 rounded-xl shadow-xl overflow-y-auto relative p-8">
+
+                <!-- Close Button -->
+                <button @click="open = false" @click.stop="open = false"
+                    class="absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-2xl">
+                    ✖
+                </button>
+
+                <!-- Product Modal Content -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                    <!-- Left: Product Image -->
+                    <img src="https://images.unsplash.com/photo-1655628143563-a4b1c60de33d?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0"
+                        alt="Product Image" class="w-full h-80 object-cover rounded-lg" />
+
+                    <!-- Right: Product Details -->
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-800">Wireless Headphones</h2>
+                        <p class="text-gray-600 mt-3 text-base leading-relaxed">
+                            Experience premium sound quality with noise cancellation and long battery life.
+                            Perfect for travel, work, or leisure.
+                        </p>
+
+                        <!-- Reviews -->
+                        <div class="flex items-center mt-4 text-yellow-400">
+                            ⭐⭐⭐⭐☆ <span class="ml-2 text-gray-500 text-sm">(120 reviews)</span>
+                        </div>
+
+                        <!-- Price -->
+                        <div class="mt-6 text-3xl font-semibold text-blue-700">
+                            $89.99
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="mt-6 flex gap-4">
+                            <button
+                                class="flex-1 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+                                Buy Now
+                            </button>
+                            <button
+                                class="flex items-center justify-center gap-2 text-blue-600 border border-blue-600 px-5 py-3 rounded-lg text-sm hover:bg-blue-50 transition">
+                                🛒 Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+  <div class="p-6" x-data="{ quickView: false }">
+    <!-- Product Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Product Card -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition relative">
+        <div class="relative">
+          <img src="https://images.unsplash.com/photo-1655628143563-a4b1c60de33d?q=80&w=800&auto=format&fit=crop"
+               alt="Wireless Headphones" 
+               class="w-full h-64 object-cover" />
+          <!-- Quick View Button -->
+          <button @click="quickView = true" 
+                  class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-white opacity-0 hover:opacity-100 transition text-lg font-semibold">
+            👁 Quick View
+          </button>
+        </div>
+        <div class="p-5">
+          <h2 class="text-lg font-bold text-gray-800">Wireless Headphones</h2>
+          <p class="text-gray-500 text-sm mt-1">High-quality sound with noise cancellation.</p>
+          
+          <!-- Rating -->
+          <div class="flex items-center mt-2">
+            <span class="text-yellow-400">★★★★★</span>
+            <span class="text-gray-400 text-sm ml-2">(120 reviews)</span>
+          </div>
+
+          <!-- Price + Cart -->
+          <div class="mt-4 flex items-center justify-between">
+            <span class="text-xl font-semibold text-blue-700">$89.99</span>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- /Product Card -->
+
+    </div>
+
+    <!-- Quick View Modal -->
+    <div x-show="quickView" 
+         x-transition 
+         class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50"
+         @click.self="quickView = false">
+      <div class="bg-white rounded-xl shadow-lg max-w-3xl w-full p-6 relative">
+        
+        <!-- Close Button -->
+        <button @click="quickView = false" 
+                class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl">
+          ✖
+        </button>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Product Image -->
+          <img src="https://images.unsplash.com/photo-1655628143563-a4b1c60de33d?q=80&w=800&auto=format&fit=crop"
+               alt="Wireless Headphones" 
+               class="w-full h-72 object-cover rounded-lg" />
+
+          <!-- Product Details -->
+          <div>
+            <h2 class="text-2xl font-bold text-gray-800">Wireless Headphones</h2>
+            <p class="text-gray-600 mt-2">Experience premium quality sound with active noise cancellation and up to 30 hours of battery life.</p>
+            
+            <!-- Rating -->
+            <div class="flex items-center mt-3">
+              <span class="text-yellow-400">★★★★★</span>
+              <span class="text-gray-500 text-sm ml-2">(120 reviews)</span>
+            </div>
+
+            <!-- Price -->
+            <div class="mt-4 text-2xl font-semibold text-blue-700">$89.99</div>
+
+            <!-- Action Buttons -->
+            <div class="mt-6 flex gap-4">
+              <button class="bg-blue-600 text-white px-5 py-2.5 rounded-lg hover:bg-blue-700 transition">
+                Buy Now
+              </button>
+              <button class="bg-white text-blue-600 border border-blue-600 px-5 py-2.5 rounded-lg hover:bg-blue-50 transition">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Quick View Modal -->
+  </div>
