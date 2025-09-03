@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-200 text-gray-800 flex flex-col items-center justify-center p-6">
+
+  <h1 class="text-3xl font-bold mb-6 text-center">Introduction to Programming with JavaScript</h1>
+  <h1 class="text-3xl font-bold mb-6 text-center">Student's MarkSheet</h1>
+
+  <div class="relative overflow-x-auto w-full max-w-3xl shadow-md rounded-lg bg-gray-100">
+    <table class="w-full text-sm text-left text-gray-700 bg-gray-100">
+      <thead class="text-xs uppercase bg-gray-150">
+        <tr>
+          <th class="px-6 py-3">Subject</th>
+          <th class="px-6 py-3">Marks Obtained</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border-b">
+          <td class="px-6 py-4">English</td>
+          <td class="px-6 py-4" id="englishmarks">--</td>
+        </tr>
+        <tr class="border-b">
+          <td class="px-6 py-4">Math</td>
+          <td class="px-6 py-4" id="mathmarks">--</td>
+        </tr>
+        <tr class="border-b">
+          <td class="px-6 py-4">Science</td>
+          <td class="px-6 py-4" id="sciencemarks">--</td>
+        </tr>
+        <tr class="border-b">
+          <td class="px-6 py-4">Computer Science</td>
+          <td class="px-6 py-4" id="csmarks">--</td>
+        </tr>
+        <tr class="border-b">
+          <td class="px-6 py-4">Urdu</td>
+          <td class="px-6 py-4" id="urdumarks">--</td>
+        </tr>
+        <tr class="font-semibold text-black">
+          <td class="px-6 py-4">Percentage</td>
+          <td class="px-6 py-4" id="percentage">--%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    let englishmarks = parseInt(prompt('Enter your English marks:'));
+    let mathmarks = parseInt(prompt('Enter your Math marks:'));
+    let sciencemarks = parseInt(prompt('Enter your Science marks:'));
+    let csmarks = parseInt(prompt('Enter your Computer Science marks:'));
+    let urdumarks = parseInt(prompt('Enter your Urdu marks:'));
+
+    let totalmarks =
+      englishmarks + mathmarks + sciencemarks + csmarks + urdumarks;
+
+    let percentage = ((totalmarks / 500) * 100).toFixed(2);
+
+    document.getElementById('englishmarks').innerText = englishmarks;
+    document.getElementById('mathmarks').innerText = mathmarks;
+    document.getElementById('sciencemarks').innerText = sciencemarks;
+    document.getElementById('csmarks').innerText = csmarks;
+    document.getElementById('urdumarks').innerText = urdumarks;
+    document.getElementById('percentage').innerText = percentage + '%';
+  </script>
+
+</body>
+
+</html>
