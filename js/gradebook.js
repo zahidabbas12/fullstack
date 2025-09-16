@@ -1,5 +1,4 @@
 function calculateGrades() {
-  // Get input values
   var sname = document.getElementById("sname").value;
   var enghmarks = parseInt(document.getElementById("enghmarks").value) || 0;
   var csmarks = parseInt(document.getElementById("csmarks").value) || 0;
@@ -7,22 +6,18 @@ function calculateGrades() {
   var webdevmarks = parseInt(document.getElementById("webdevmark").value) || 0;
   var hismarks = parseInt(document.getElementById("hismarks").value) || 0;
 
-  // Basic check for empty name
-  if (sname.trim() === "") {
-    document.getElementById("result").classList.remove("hidden");
-    document.getElementById("result").innerHTML =
-      "<p class='text-red-600'>Please enter student name.</p>";
-    return;
-  }
+  // if (sname.trim() === "") {
+  //   document.getElementById("result").classList.remove("hidden");
+  //   document.getElementById("result").innerHTML =
+  //     "<p class='text-red-600'>Please enter student name.</p>";
+  //   return;
+  // }
 
-  // Total and percentage calculation
   var totalmarks = enghmarks + csmarks + dsamarks + webdevmarks + hismarks;
   var percentage = (totalmarks / 500) * 100;
 
-  // Determine pass/fail
   var status = percentage >= 33 ? "Pass" : "Fail";
 
-  // Determine grade
   var grade = "";
   if (percentage >= 90) {
     grade = "A+";
@@ -40,7 +35,6 @@ function calculateGrades() {
     grade = "F";
   }
 
-  // Show result
   var resultDiv = document.getElementById("result");
   resultDiv.classList.remove("hidden");
   resultDiv.innerHTML = `
