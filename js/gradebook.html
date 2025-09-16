@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grade Book</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-6">
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+        <h1 class="text-3xl font-bold mb-6 text-center text-blue-700">📘 Grade Book</h1>
+        <form class="space-y-4" onsubmit="return false">
+            <div>
+                <label for="sname" class="block text-sm font-medium text-gray-700">Student Name</label>
+                <input type="text" id="sname" placeholder="e.g. John Doe"
+                    class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            </div>
+            <!-- Subject Inputs -->
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div>
+                    <label for="enghmarks" class="block text-sm font-medium text-gray-700">English</label>
+                    <input type="number" id="enghmarks" class="mt-1 w-full border border-gray-300 rounded-md p-2"
+                        min="0" max="100" />
+                </div>
+                <div>
+                    <label for="csmarks" class="block text-sm font-medium text-gray-700">Computer Science</label>
+                    <input type="number" id="csmarks" class="mt-1 w-full border border-gray-300 rounded-md p-2" min="0"
+                        max="100" />
+                </div>
+                <div>
+                    <label for="dsamarks" class="block text-sm font-medium text-gray-700">DSA</label>
+                    <input type="number" id="dsamarks" class="mt-1 w-full border border-gray-300 rounded-md p-2" min="0"
+                        max="100" />
+                </div>
+                <div>
+                    <label for="webdevmark" class="block text-sm font-medium text-gray-700">Web Dev</label>
+                    <input type="number" id="webdevmark" class="mt-1 w-full border border-gray-300 rounded-md p-2"
+                        min="0" max="100" />
+                </div>
+                <div>
+                    <label for="hismarks" class="block text-sm font-medium text-gray-700">History</label>
+                    <input type="number" id="hismarks" class="mt-1 w-full border border-gray-300 rounded-md p-2" min="0"
+                        max="100" />
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button onclick="calculateGrades()"
+                    class="mt-4 bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition">Calculate</button>
+            </div>
+        </form>
+
+        <div id="result" class="mt-6 p-4 hidden bg-gray-50 border border-gray-300 rounded text-gray-800 text-sm"></div>
+    </div>
+    <script src="gradebook.js"></script>
+</body>
+</html>
