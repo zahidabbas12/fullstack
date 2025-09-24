@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BMI Calculator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen flex items-center justify-center bg-gray-100">
+  <div class="w-full max-w-md bg-white shadow-lg rounded-2xl p-8">
+    <h1 class="text-2xl font-bold text-center text-blue-600 mb-6">BMI Calculator</h1>
+
+    <form onsubmit="return false;" class="space-y-4">
+      <div>
+        <label for="weight" class="block text-gray-700 font-medium">Weight (kg):</label>
+        <input
+          id="weight"
+          type="number"
+          placeholder="Enter weight in kg"
+          required
+          class="mt-1 w-full px-3 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-blue-400 focus:outline-none"
+        />
+      </div>
+
+      <div>
+        <label for="height" class="block text-gray-700 font-medium">Height (cm):</label>
+        <input
+          id="height"
+          type="number"
+          placeholder="Enter height in cm"
+          required
+          class="mt-1 w-full px-3 py-2 border rounded-lg shadow-sm focus:ring-2 focus:ring-blue-400 focus:outline-none"
+        />
+      </div>
+
+      <div class="text-center">
+        <input
+          type="button"
+          value="Calculate"
+          onclick="calculateBmi()"
+          class="px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition"
+        />
+      </div>
+    </form>
+
+    <div id="bmidiv" class="mt-6 text-center text-lg font-semibold"></div>
+  </div>
+
+  <script src="bmi.js"></script>
+</body>
+</html>
