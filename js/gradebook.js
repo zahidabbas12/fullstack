@@ -6,12 +6,6 @@ function calculateGrades() {
   var webdevmarks = parseInt(document.getElementById("webdevmark").value) || 0;
   var hismarks = parseInt(document.getElementById("hismarks").value) || 0;
 
-  // if (sname.trim() === "") {
-  //   document.getElementById("result").classList.remove("hidden");
-  //   document.getElementById("result").innerHTML =
-  //     "<p class='text-red-600'>Please enter student name.</p>";
-  //   return;
-  // }
 
   var totalmarks = enghmarks + csmarks + dsamarks + webdevmarks + hismarks;
   var percentage = (totalmarks / 500) * 100;
